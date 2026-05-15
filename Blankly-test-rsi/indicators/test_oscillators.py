@@ -36,7 +36,8 @@ class Oscillators(unittest.TestCase):
     def setUpClass(cls) -> None:
         data_path = Path("tests/config/test_data.p").resolve()
         with open(data_path, 'rb') as f:
-            cls.data = pickle.load(f)
+cls.data = # FIX: 替换pickle为安全格式
+f)
 
     def test_rsi(self):
         for period in self.data['periods']:
